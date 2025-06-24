@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Index Application</title>
+    <style>
+        .form-group {
+            margin: 15px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 15px;
+        }
+        .checkbox-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+        button {
+            background-color: rgb(56, 91, 126);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: rgb(77, 77, 146);
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <h1 style="color:rgb(77, 77, 146);">Air Quality Index Application</h1>
+    
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <div style="width: 400px; height: 600px; border: 1px solid black; display: flex; flex-direction: column;">
+            <div style="height: 300px; border-bottom: 1px solid black;"></div>
+            <div style="height: 300px;"></div>
+        </div>
+        
+        <div style="width: 400px; height: 600px; border: 1px solid black; display: flex; flex-direction: column;">
+            <div style="height: 50px; border-bottom: 1px solid black;">
+                <h2 style="color:rgb(56, 91, 126);">Registration Box</h2>
+            </div>
+            
+            <div style="height: 400px; border-bottom: 1px solid black; overflow-y: auto;">
+                <form style="padding: 10px;">
+                    <div class="form-group">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferred-city">Preferred City:</label>
+                        <select id="preferred-city" name="preferred-city">
+                            <option value="">Select a city</option>
+                            <option value="new-york">New York</option>
+                            <option value="los-angeles">Los Angeles</option>
+                            <option value="chicago">Chicago</option>
+                            <option value="houston">Houston</option>
+                            <option value="phoenix">Phoenix</option>
+                            <option value="london">London</option>
+                            <option value="paris">Paris</option>
+                            <option value="tokyo">Tokyo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the Terms & Conditions</label>
+                    </div>
+                </form>
+            </div>
+            
+            <div style="height: 150px; display: flex; justify-content: center; align-items: center;">
+                <button type="submit">Register</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
