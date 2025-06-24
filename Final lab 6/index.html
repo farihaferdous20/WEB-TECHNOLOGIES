@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Quality Index Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header-container">
+  <img src="aqi.jpg" alt="AQI Logo" class="logo">
+  
+</div>
+<h1>Air Quality Index Application</h1>
+  <div class="main-container">
+    <div class="box left-box">
+      <div class="top-half">
+        <table class="aqi-table">
+          <thead>
+            <tr>
+              <th>City</th>
+              <th>AQI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Dhaka</td><td>--</td></tr>
+            <tr><td>Chattogram</td><td>--</td></tr>
+            <tr><td>Khulna</td><td>--</td></tr>
+            <tr><td>Rangpur</td><td>--</td></tr>
+            <tr><td>Sylhet</td><td>--</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="bottom-half">
+        <p> </p>
+      </div>
+    </div>
+
+    <div class="box right-box">
+      <div class="header-box">
+        <h2>Registration Box</h2>
+      </div>
+      <div class="form-box">
+        <form action="submit.php" method="POST">
+          <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email (must be @aiub.edu):</label>
+            <input type="email" id="email" name="email" required pattern="^[^@\s]+@aiub\.edu$" title="Email must end with @aiub.edu">
+            <div class="error-message" id="emailError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div class="error-message" id="passwordError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <div class="error-message" id="confirmPasswordError"></div>
+          </div>
+
+          <div class="form-group">
+            <select id="Country-Code" name="Country-Code" required>
+            <option value="">Select country code</option>
+            <option value="Bangladesh">BD-880</option>
+            </select>
+
+            <div class="error-message" id="locationError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="preferred-city">Preferred City:</label>
+            <select id="preferred-city" name="preferred-city" required>
+              <option value="">Select a city</option>
+              <option value="Dhaka">Dhaka</option>
+              <option value="Chattogram">Chattogram</option>
+              <option value="Khulna">Khulna</option>
+              <option value="Rangpur">Rangpur</option>
+              <option value="Sylhet">Sylhet</option>
+            </select>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the Terms & Conditions</label>
+          </div>
+
+          <div class="button-container">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+      <div class="footer-box">
+        <p> </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
